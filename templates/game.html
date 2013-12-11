@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}Game {% endblock %}
+
+{% block content %}
+{% if correct is defined%}
+	{% if correct %}
+		<h1 style="color:green">Correct!</h1>
+	{% else %}
+		<h1 style="color:red;"> Sorry, Incorrect!</h1>
+	{% endif %}
+{% endif %}
+<div class=jumbotron">
+<h4>What is this?</h4>
+<img style="display:block;margin-left:auto;margin-right:auto;" src="{{filename}}" alt="" height="300" width=300px/>
+</p>
+<form action="" method="post">
+<input type="hidden" name="expected" value="{{filename}}">
+<input type="text" name="answer">
+<input class="btn btn-success" type="submit" value="Answer">
+</form>
+</div>
+
+{% endblock %}
