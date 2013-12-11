@@ -8,7 +8,7 @@ Usage
 ========
 Flask applications can be configured to run on any WSGI-capable server with Python. Since this application was not actually written for production deployment, some changes may need to be made to run it on your server.
 
-To test this application, simply run 
+To test this application, install Python and Flask and then simply run 
 ```bash
 python index.py
 ```
