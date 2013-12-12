@@ -21,7 +21,7 @@ def show_home():
 #grade is an integer arg defining which grade level they are playing
 @app.route('/game/<grade>', methods=['GET', 'POST'])
 def show_img(grade):
-	#get the directory for the grade and choose a random image
+	#get the directory for the grade and choose a random image from it
 	base = 'static/images/' + grade + '/'
 	dirlist = os.listdir(base)
 	image = choice(dirlist)
